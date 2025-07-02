@@ -1,0 +1,396 @@
+
+/*Les bouts de code non expliquer ont déjà été expliqué plus tôt*/
+
+/* ===========================
+   Styles généraux
+=========================== */
+
+body {
+    background-color: beige !important; /* Définit la couleur d'arrière-plan de la page */
+    margin: 0; /* Supprime les marges externes par défaut */
+    padding: 0; /* Supprime les marges internes par défaut */
+}
+
+.carousel {
+    margin: 50px; /* Ajoute un espacement autour du carousel */
+}
+
+/* ===========================
+   Header et Navigation
+=========================== */
+
+.recH {
+    background-color: #222831; /* Définit la couleur d'arrière-plan du header */
+    width: 100%; /* Prend toute la largeur disponible */
+    height: 130px; /* Fixe la hauteur du header */
+    display: flex; /* Utilise le modèle flexbox pour aligner les enfants */
+    justify-content: space-around; /* Distribution uniforme des éléments avec espace autour */
+    align-items: center; /* Centre verticalement les éléments */
+    flex-wrap: wrap; /* Permet aux éléments de passer sur plusieurs lignes si nécessaire */
+    padding: 10px 0; /* Ajoute un espacement interne en haut et en bas */
+}
+
+.logo {
+    width: 100px; /* Fixe la largeur du logo */
+    height: auto; /* Ajuste la hauteur proportionnellement */
+}
+
+.cart {
+    width: 90px; /* Fixe la largeur de l'icône de panier */
+    height: auto; /* Ajuste la hauteur proportionnellement */
+}
+
+.titre {
+    color: #699F00; /* Définit la couleur du texte */
+    font-size: 2rem; /* Fixe la taille de la police */
+    font-weight: bold; /* Met le texte en gras */
+    list-style: none; /* Supprime les puces pour une éventuelle liste */
+    text-align: center; /* Centre le texte horizontalement */
+}
+
+/* Boutons de navigation */
+.boutons {
+    background-color: #222831; /* Couleur de fond du conteneur de boutons */
+    display: flex; /* Affichage flex pour organiser les boutons */
+    justify-content: center; /* Centre les boutons horizontalement */
+    align-items: center; /* Aligne les boutons verticalement */
+    flex-wrap: wrap; /* Permet un retour à la ligne si nécessaire */
+    padding: 10px; /* Espacement interne */
+}
+
+.accueil, .especes, .achats, .contact, .propos {
+    background-color: #222831; /* Couleur de fond des boutons */
+    padding: 10px 20px; /* Ajoute un espacement interne */
+    color: #699F00; /* Couleur du texte des boutons */
+    border-radius: 30px; /* Arrondit les coins des boutons */
+    border: 3px solid #699F00; /* Ajoute une bordure verte */
+    font-weight: bold; /* Texte en gras */
+    width: 150px; /* Largeur fixe des boutons */
+    margin: 10px; /* Ajoute un espacement autour des boutons */
+    text-align: center; /* Centre le texte horizontalement */
+    text-decoration: none; /* Supprime le soulignement par défaut des liens */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animation fluide au survol */
+}
+
+.accueil2, .especes2, .achats2, .contact2, .propos2 {
+    background-color: #699F00; /* Couleur de fond des boutons actifs */
+    padding: 10px 20px; /* Espacement interne */
+    color: #222831; /* Couleur du texte des boutons actifs */
+    border-radius: 30px; /* Arrondit les coins */
+    font-weight: bold; /* Texte en gras */
+    width: 150px; /* Largeur fixe */
+    margin: 10px; /* Espacement externe */
+    text-align: center; /* Centre le texte horizontalement */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animation fluide au survol */
+}
+
+.accueil:hover, .especes:hover, .achats:hover, .contact:hover, .propos:hover {
+    background-color: #373d46; /* Change la couleur de fond au survol */
+    transform: scale(1.05); /* Agrandit légèrement le bouton au survol */
+}
+
+.accueil2:hover, .especes2:hover, .achats2:hover, .contact2:hover, .propos2:hover {
+    background-color: #77b300; /* Change la couleur de fond des boutons actifs au survol */
+    transform: scale(1.05); /* Agrandit légèrement les boutons actifs au survol */
+}
+
+/* ===========================
+   Boutons de connexion
+=========================== */
+
+.Sign-Up, .Log-In {
+    color: #699F00; /* Définit la couleur du texte */
+    font-weight: bold; /* Met le texte en gras */
+    background-color: #222831; /* Couleur de fond */
+    border-radius: 15px; /* Arrondit les coins */
+    width: 110px; /* Largeur fixe */
+    text-decoration: none; /* Supprime le soulignement */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animation fluide au survol */
+}
+
+.Sign-Up2, .Log-In2 {
+    color: #699F00; /* Couleur du texte */
+    font-weight: bold; /* Texte en gras */
+    background-color: #222831; /* Couleur de fond */
+    border-radius: 15px; /* Arrondit les coins */
+    width: 110px; /* Largeur fixe */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animation fluide */
+}
+
+.Sign-Up:hover, .Log-In:hover, .Sign-Up2:hover, .Log-In2:hover {
+    color: #77b300; /* Change la couleur du texte au survol */
+    transform: scale(1.05); /* Agrandit légèrement les boutons au survol */
+}
+
+/* ===========================
+   Footer
+=========================== */
+
+.recB {
+    background-color: #444A53; /* Couleur de fond du footer */
+    color: #1E1E1E; /* Couleur du texte */
+    font-weight: bold; /* Met le texte en gras */
+    width: 100%; /* Largeur totale */
+    padding: 20px; /* Espacement interne */
+    display: flex; /* Affichage flex pour aligner les éléments */
+    justify-content: space-around; /* Espacement égal entre les éléments */
+    align-items: center; /* Centre verticalement */
+}
+
+.social {
+    text-decoration: none;
+    color: #1E1E1E;
+    font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.social:hover {
+    color: #000000;
+    transform: scale(1.05);
+}
+
+.pays{
+    width: 140px;
+    height: auto;
+}
+
+.deconnexion{
+    background-color: #3C424A;
+    padding: 5px 15px;
+    color: #1E1E1E;
+    border-radius: 30px;
+    border: 3px solid #1E1E1E;
+    font-weight: bold;
+    width: 140px;
+    text-align: center;
+    text-decoration: none;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animation fluide */
+}
+
+.deconnexion:hover{
+    background-color: #373d46;
+    scale: 1.05;
+}
+
+/* ===========================
+   Sign Up & Log In
+=========================== */
+
+.white-container {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.validation {
+    display: flex;
+    align-items: baseline;/* aligner les éléments*/
+}
+
+.SLog-In, .LSign-Up {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    margin-left: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animation fluide */
+}
+
+.SLog-In:hover, .LSign-Up:hover{
+    transform: scale(1.05);
+    color: #222831;
+}
+
+.cartes {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ===========================
+   Images rondes/Images
+=========================== */
+
+.images-propos {
+    display: flex;     
+    justify-content: center; 
+    gap: 20px;    
+}
+
+.rond {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.rond img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rond:hover {
+    transform: scale(1.05);
+}
+
+.images {
+    height: 30px;
+    width: 30px;
+    margin-bottom: 5px;
+}
+
+/* ===========================
+   Map
+=========================== */
+
+.map {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    padding: 10px;
+}
+
+.imgmap {
+    width: 100%;
+    height: auto;
+    max-width: 1200px;
+    border-radius: 10px;
+}
+
+.soustitre {
+    display: flex;
+    color: #222831;
+    font-weight: bold;
+}
+
+/* ===========================
+   Page Espèces
+=========================== */
+
+.page-region{
+    margin: 50px;
+}
+
+.page-region .card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.page-region .card img {
+    width: 375px;
+    height: 250px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+.page-region .card button {
+    background-color: #2d2d2d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.page-region .card button:hover {
+    background-color: #444;
+    transform: scale(1.05);
+}
+
+/* ===========================
+   Boutons d'achat
+=========================== */
+
+.btnachat {
+    background-color: #222831;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btnachat:hover {
+    background-color: #393e46;
+    transform: scale(1.05);
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+@media (max-width: 768px) {
+    .carousel {
+        margin: 20px; /* Réduit l'espacement pour les écrans plus petits */
+    }
+    .recH {
+        flex-direction: column; /* Passe les éléments du header sur une seule colonne */
+        text-align: center; /* Centre le texte pour une meilleure lisibilité */
+        height: auto; /* Permet au header de s'adapter à la hauteur du contenu */
+    }
+    .logo {
+        width: 80px; /* Réduit la taille du logo */
+    }
+    .titre {
+        font-size: 1.5rem; /* Réduit la taille du titre */
+    }
+    .cart {
+        width: 70px; /* Réduit la taille de l'icône de panier */
+    }
+    .boutons a {
+        width: 110px; /* Réduit la largeur des boutons */
+        font-size: 0.9rem; /* Réduit la taille du texte */
+    }
+    .cartes {
+        flex-direction: column; /* Passe les éléments en colonne pour s'adapter à l'écran */
+    }
+    .map {
+        padding: 5px; /* Réduit l'espacement interne */
+    }
+    .imgmap {
+        width: 90%; /* Limite la largeur de l'image à 90% de l'écran */
+    }
+    .soustitre {
+        font-size: 1.3rem; /* Réduit la taille des sous-titres */
+    }
+    .rond {
+        width: 70px; /* Réduit la taille des images rondes */
+        height: 70px; /* Réduit la hauteur des images rondes */
+    }
+}
+
+
+@media (max-width: 400px) {
+    .page-region{
+        margin: 10px;
+    }
+
+    .page-region .card img {
+        width: 240px;
+        height: 150px;
+    }
+
+    .images-propos {
+        display: flex;     
+        align-items: center; 
+        flex-direction: column;
+    }
+}
